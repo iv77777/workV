@@ -52,14 +52,6 @@ function miscalculation(){
   workValue = uklon + bolt + v838 + Number(privat.value.replace(/\s/g, '')) + cash - priceKm - WarmingUpTheCar.value.replace(/\s/g, '');
 
   earned.innerHTML = Math.round(workValue);
-
-  // console.log("uklon",uklon);
-  // console.log('bolt',bolt);
-  // console.log("838",v838);
-  // console.log("Зозмен",cash);
-  // console.log("Газ",priceKm);
-  console.log(workValue);
-  console.log(earned);
 }
 
 // ==========================================================
@@ -73,9 +65,8 @@ function validity(){
 // для каждого инпута
 inputs.forEach(function (input) {
 
-  // при фокусе на input убераем erorr у всех коректных инпутов
+  // при фокусе на input убераем plasholder
   input.onfocus = function () {
-     console.log("ok");
      input.placeholder = '';
     };
   });
@@ -84,38 +75,5 @@ inputs.forEach(function (input) {
 
 validity();
 
-// // для каждого инпута
-// inputs.forEach(function (input) {
-
-//   // при фокусе на input убераем erorr у всех коректных инпутов
-//   input.onfocus = function () {
-//     inputs.forEach(function (input) {
-//       if (isNumber(input.value.replace(/\s/g, '')) || input.value.replace(/\s/g, '') == "") {
-//         input.classList.remove('erorr');
-//       }
-//     });
-//   };
-
-//   // при изминении инпута
-//   input.oninput = function () {
-
-//     input.classList.remove('erorr');
-
-//     // если value не число то показуем erorr
-//     if (!isNumber(input.value.replace(/\s/g, '')) && !input.value.replace(/\s/g, '') == "") {
-//       input.classList.add('erorr');
-//     }
-
-//     if (afterMileage.value.replace(/\s/g, '') < beforeMileage.value.replace(/\s/g, '')) {
-//       afterMileage.classList.add('erorr');
-//       beforeMileage.classList.add('erorr');
-//     }
-//   };
-// });
-
-// // является ли числом или строкой
-// function isNumber(n) { return /^-?[\d.]+(?:e-?\d+)?$/.test(n); }
-// // обрезает пробелы
-// // Element.replace(/\s/g, '');
 
 // ---------------------------------------------------
